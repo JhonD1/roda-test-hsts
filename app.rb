@@ -8,5 +8,9 @@ class App < Roda
     r.root do
       view 'index'
     end
+
+    r.on 'www.roda-test-hsts.onrender.com' do
+      r.redirect '/'
+    end
   end
 end
